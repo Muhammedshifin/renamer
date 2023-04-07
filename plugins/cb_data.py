@@ -4,7 +4,7 @@ from pyrogram.types import (  InlineKeyboardButton, InlineKeyboardMarkup,ForceRe
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from helper.database import db
-from config import ADMINS, LOG_CHANNEL
+from config import ADMIN, LOG_CHANNEL
 import os 
 import humanize
 
@@ -81,7 +81,7 @@ async def doc(bot,update):
      try:
         if type == "document":
            if str(master) > str(filesize):
-               if update.message.chat.id in ADMINS:
+               if update.message.chat.id in ADMIN:
                    await User.send_document(
 		            LOG_CHANNEL,
                             document=file_path,
