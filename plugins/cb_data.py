@@ -5,6 +5,7 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from helper.database import db
 from config import ADMIN, LOG_CHANNEL
+from userbot import User
 import os 
 import humanize
 
